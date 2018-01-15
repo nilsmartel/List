@@ -62,8 +62,22 @@ func (list *List) Pop() interface{} {
 
 // IsEmpty
 // returns true if a List is empty
-func (list List) IsEmpty() bool {
+func (list *List) IsEmpty() bool {
 	return list.len == 0
+}
+
+// Contains
+// Check if a List contains a certain Element
+func (list *List) Contains(value interface{}) bool {
+	current := list.node
+	for current != nil {
+		if current.value == value {
+			return true
+		}
+		current = current.next
+	}
+
+	return false
 }
 
 func newNode(value interface{}) *Node {
