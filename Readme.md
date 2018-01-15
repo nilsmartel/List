@@ -32,3 +32,19 @@ for {
 	fmt.Println(value)
 }
 ```
+
+this will neatly print out
+
+```
+0
+1
+2
+3
+4
+5
+6
+Seven
+```
+
+nice.
+
