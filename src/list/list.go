@@ -11,14 +11,13 @@ type Node struct {
 // Standart Linked List
 type List struct {
 	node *Node
-	len  uint
 }
 
 // New
 // Create a new (Linked) List from input parameter
 // @param values Variable Amount of values to be made into a linked list
 func New(values ...interface{}) List {
-	list := List{nil, 0}
+	list := List{nil}
 
 	for _, v := range values {
 		list.Push(v)
@@ -41,29 +40,26 @@ func (list *List) Push(value interface{}) {
 
 		current.next = newNode(value)
 	}
-
-	list.len += 1
 }
 
 // Pop
 // Remove and Return first Element of a List.
 // if list is empty this will return nil
 func (list *List) Pop() interface{} {
-	if list.len == 0 {
+	if list.node == nil {
 		return nil
 	}
 
 	node := list.node.next
 	value := list.node.value
 	list.node = node
-	list.len -= 1
 	return value
 }
 
 // IsEmpty
 // returns true if a List is empty
 func (list *List) IsEmpty() bool {
-	return list.len == 0
+	return list.node == nil
 }
 
 // Contains
@@ -78,6 +74,33 @@ func (list *List) Contains(value interface{}) bool {
 	}
 
 	return false
+}
+
+// Array
+// Create an Array from a List
+func (list *List) Array() []interface{} {
+	arr := []interface{}
+	current := list.node
+
+	for current != nil {
+		append(arr, current.value)
+		current = current.next
+	}
+}
+
+
+// Len
+// returns Length (Size) of a List
+func (list *List) Len() int {
+	length := 0
+	current := list.node
+
+	for current != nil {
+		length += 1
+		current = current.next
+	}
+
+	return length
 }
 
 func newNode(value interface{}) *Node {
