@@ -25,11 +25,9 @@ Lists are implemented using the `interface{}` type, meaning you can store whatev
 list := list.New(0, 1, 2, 3, 4, 5)
 list.Push(6)
 list.Push("Seven")
-for {
+
+for !list.IsEmpty() {
 	value := list.Pop()
-	if value == nil {
-		break
-	}
 
 	fmt.Println(value)
 }
@@ -43,6 +41,7 @@ this will neatly print out
 2
 3
 4
+4.5
 5
 6
 Seven
