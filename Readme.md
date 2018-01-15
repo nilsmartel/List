@@ -10,7 +10,7 @@ What's next?
 * Iterator for List
 * Lists are currently Fifo only... quite boring actually
 * Sort function? (because, you know, I can. But this will become a shitty task, because `interface{}`)
-* Well, you could filter Lists for certain types... type-filtering Lists would be usefull
+* Well, you could filter Lists for certain types... type-filtering a List would be usefull
 * Better way of Printing Lists
 
 so yeah, that's pretty much it. Linked Lists are a terrible idea anyway.
