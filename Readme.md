@@ -11,6 +11,7 @@ What's next?
 * Lists are currently Fifo only... quite boring actually
 * Sort function? (because, you know, I can. But this will become a shitty task, because `interface{}`)
 * Well, you could filter Lists for certain types... type-filtering a List would be usefull
+* Function to check, if a list contains a certain Element
 * Better way of Printing Lists
 * Concat the shit out of Lists, OF COURSE
 
