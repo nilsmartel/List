@@ -86,6 +86,8 @@ func (list *List) Array() []interface{} {
 		append(arr, current.value)
 		current = current.next
 	}
+
+	return arr
 }
 
 
