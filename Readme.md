@@ -12,6 +12,7 @@ What's next?
 * Sort function? (because, you know, I can. But this will become a shitty task, because `interface{}`)
 * Well, you could filter Lists for certain types... type-filtering a List would be usefull
 * Better way of Printing Lists
+* Concat the shit out of Lists, OF COURSE
 
 so yeah, that's pretty much it. Linked Lists are a terrible idea anyway.
 
